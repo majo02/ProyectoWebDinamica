@@ -25,9 +25,9 @@ class LoginState extends State<Login>{
   // Esto era para ahorrar código pero no me toma la variable xd -> final _titulos = TextStyle(fontSize: 10.0, color: Color.fromRGBO(235, 192, 52,1));
   @override
   Widget build(BuildContext contexto){
-    return Scaffold(
-      backgroundColor: Colors.blue[100],
-      body: ListView(
+    return Material(
+      color: Colors.teal,
+      child: ListView(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(80.0),
@@ -38,7 +38,7 @@ class LoginState extends State<Login>{
             padding: EdgeInsets.fromLTRB(10, 50, 10, 30),
             child: Text(
               'Iniciar sesión.', 
-              style: TextStyle(color: Colors.black, fontSize: 30.0), textAlign: TextAlign.center,),
+              style: TextStyle(color: Colors.white, fontSize: 30.0), textAlign: TextAlign.center,),
             ),
           Form(
             key: _formkey,              
@@ -86,7 +86,7 @@ class LoginState extends State<Login>{
                 Padding(
                   padding: EdgeInsets.fromLTRB(50, 50, 50, 10),
                   child: RaisedButton(
-                    color: Colors.black,
+                    color: Colors.white,
                   onPressed: (){
                     if(_formkey.currentState.validate()){
                       Navigator.push(
@@ -94,13 +94,13 @@ class LoginState extends State<Login>{
                         MaterialPageRoute(builder: (context) => _principal),);
                     }
                   },
-                  child: Text('Iniciar', style: TextStyle(color: Colors.blue[100], fontSize: 25.0,),)
+                  child: Text('Iniciar', style: TextStyle(color: Colors.teal, fontSize: 25.0,),)
                 ),
                 ),    
                 Padding(
                   padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                   child: RaisedButton(
-                    color: Colors.black,
+                    color: Colors.white,
                   onPressed: (){
                      if(_formkey.currentState.validate()){
                       Navigator.push(
@@ -108,7 +108,7 @@ class LoginState extends State<Login>{
                         MaterialPageRoute(builder: (context) => _registro),);
                     }
                   },
-                  child: Text('Registrarse', style: TextStyle(color: Colors.blue[100], fontSize: 25.0,),)
+                  child: Text('Registrarse', style: TextStyle(color: Colors.teal, fontSize: 25.0,),)
                 ),
                 ),    
                             
